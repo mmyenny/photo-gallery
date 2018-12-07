@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
+
 import './App.css'
 import CategoryList from './CategoryList'
 import PhotoList from './PhotoList'
+import PhotoDetail from './PhotoDetail'
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
       <div className="App">
         <>
           <h1>Photo Gallery</h1>
-          <PhotoList />
+          <CategoryList />
         </>
       </div>
     )
