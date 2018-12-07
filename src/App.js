@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import CategoryList from './CategoryList'
+import PhotoList from './PhotoList'
 
 class App extends Component {
   render() {
@@ -8,14 +10,7 @@ class App extends Component {
       <div className="App">
         <>
           <h1>Photo Gallery</h1>
-          <ul>
-            <li>
-              <a href="/pandas">Panda Bears</a>{' '}
-            </li>
-            <li>
-              <a href="/miniatures">Miniatures</a>{' '}
-            </li>
-          </ul>
+          <PhotoList />
         </>
       </div>
     )
