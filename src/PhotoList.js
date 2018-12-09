@@ -4,13 +4,13 @@ import photos from './photos.json'
 
 class PhotoList extends Component {
   render() {
-    const categoryData = photos['miniatures']
+    const categoryData = photos['pandas']
 
     return (
       <ul className="photolist">
         {categoryData.photos.map(photo => {
           return (
-            <li key="category">
+            <li>
               <p>{photo.title}</p>
               <a href={photo.sourceURL}>
                 <img src={photo.imageURL} alt="photo" />

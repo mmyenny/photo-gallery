@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 
+import photos from './photos.json'
+
 class PhotoDetail extends Component {
   render() {
+    const categoryData = photos['pandas']
+    const photoIndex = 0
     return (
       <div>
-        <h2>Panda Waving</h2>
-        <img src="https://cdn-images-1.medium.com/max/1600/1*i1vVm3EqqDIkyucD0079wg.jpeg" />
+        <h2>{categoryData.photos[photoIndex].title}</h2>
+        <img src={categoryData.photos[photoIndex].imageURL} />
       </div>
     )
   }

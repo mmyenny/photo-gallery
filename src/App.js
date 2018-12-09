@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import './App.css'
 import CategoryList from './CategoryList'
@@ -8,12 +9,14 @@ import PhotoDetail from './PhotoDetail'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Router>
         <>
           <h1>Photo Gallery</h1>
-          <PhotoList />
+          <Route exact path="/" component={CategoryList} />
+          <Route exact path="/pandas" component={PhotoList} />
+          <Route path="/pandas/1" component={PhotoDetail} />
         </>
-      </div>
+      </Router>
     )
   }
 }
